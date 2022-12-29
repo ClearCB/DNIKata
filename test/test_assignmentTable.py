@@ -6,9 +6,24 @@ import pytest
 def test_assignmentTable():
 
     table = AssignmentTable()
+
     first_letter = table.assignment_table[0]
 
     assert type(first_letter) == str
+
+# Test if the length can be calculated correctly
+@pytest.mark.test_getLenght
+def test_getLenght():
+
+    table = AssignmentTable()
+
+    assert table.getLength() == 23
+
+    new_table = AssignmentTable()
+    new_table.assignment_table = [0]
+
+    assert new_table.getLength() == 1
+
 
 # Test if we can take the position of the letter in table
 @pytest.mark.test_getLetter
