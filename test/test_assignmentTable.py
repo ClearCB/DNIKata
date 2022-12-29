@@ -20,3 +20,11 @@ def test_getLetter():
     assert dni_letter.getLetter("49481741") == "R"
     assert dni_letter.getLetter("49481742") == "W"
     assert dni_letter.getLetter("49481743") == "A"
+
+# Test if we can check if a letter is correct or not
+@pytest.mark.test_letterCorrect
+def test_letterCorrect():
+
+    table = AssignmentTable()
+
+    assert table.correctLetter("Ñ") == False
