@@ -4,9 +4,10 @@ import pytest
 @pytest.mark.test_dniConstructor
 def test_dniConstructor():
 
-    new_dni = "123456789D"
+    number_dni = "123456789"
+    letter_dni = "D"
 
     dni = DNI("123456789D")
 
-    assert dni.number == new_dni
+    assert dni.number == (number_dni + letter_dni) 
     assert dni.tabla.assignment_table[9] == "D"
