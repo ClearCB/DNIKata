@@ -17,7 +17,10 @@ class DNI:
 
     def letterIsCorrect(self):
 
-        return self.getLetter() == self.tabla.correctLetter(self.getNumber())
+        try:
+            return self.getLetter() == self.tabla.correctLetter(self.getNumber())
+        except:
+            return False
 
     def numberLengthIsCorrect(self):
 
@@ -34,10 +37,7 @@ class DNI:
 
     def dniIsCorrect(self):
 
-        try:
-            return self.numberLengthIsCorrect() and self.numberIsIntegrer() and self.letterIsCorrect()
-        except:
-            return False
+        return self.numberLengthIsCorrect() and self.numberIsIntegrer() and self.letterIsCorrect()
 
 
 if __name__ == "__main__":

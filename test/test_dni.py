@@ -41,11 +41,11 @@ def test_letterIsCorrect(dniTest):
 
     assert dniTest.letterIsCorrect() == True
 
-@pytest.mark.test_numberLengthCorrect
-def test_numberLengthCorrect(dniTest,dniTestIncorrect):
+@pytest.mark.test_numberLengthIsCorrect
+def test_numberLengthIsCorrect(dniTest,dniTestIncorrect):
 
-    assert dniTest.numberLengthCorrect() == True
-    assert dniTestIncorrect.numberLengthCorrect() == False
+    assert dniTest.numberLengthIsCorrect() == True
+    assert dniTestIncorrect.numberLengthIsCorrect() == False
 
 @pytest.mark.test_numberIsIntegrer
 def test_numberIsIntegrer(dniTest,dniTestIncorrect):
