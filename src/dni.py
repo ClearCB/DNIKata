@@ -32,3 +32,9 @@ class DNI:
         except:
             return False 
 
+    def dniIsCorrect(self):
+
+        try:
+            return self.numberLengthCorrect() and self.numberIsIntegrer() and self.letterIsCorrect()
+        except:
+            return False

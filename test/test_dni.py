@@ -52,3 +52,9 @@ def test_numberIsIntegrer(dniTest,dniTestIncorrect):
 
     assert dniTest.numberIsIntegrer() == True
     assert dniTestIncorrect.numberIsIntegrer() == False
+
+@pytest.mark.test_dniIsCorrect
+def test_dniIsCorrect(dniTest,dniTestIncorrect):
+
+    assert dniTest.dniIsCorrect() == True
+    assert dniTestIncorrect.dniIsCorrect() == False
