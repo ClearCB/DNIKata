@@ -10,14 +10,21 @@ class AssignmentTable:
 
         return len(self.assignment_table)
 
+    def letterPosition(self, number):
+
+        letter_position = int(number) % self.getLength()
+
+        return letter_position
+
     def getLetter(self, number):
+
+        position = self.letterPosition(number)
 
         try:
 
-            letter_in_table = self.assignment_table[int(number) % self.getLength()]
-            return letter_in_table
+            return self.assignment_table[position]
 
-        except IndexError:
+        except: 
 
             print("The letter is not in the assignment table")
 
