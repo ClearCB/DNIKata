@@ -9,8 +9,15 @@ class DNI:
 
     def getLetter(self):
 
-        return "Y"
+        return self.number[-1]
 
     def getNumber(self):
 
-        return "49481746"
+        return self.number[:-1]
+
+    def letterIsCorrect(self):
+
+        return self.getLetter() == self.tabla.correctLetter(self.getNumber())
+
+    # def numberIsCorrect(self):
+

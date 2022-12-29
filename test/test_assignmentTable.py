@@ -47,11 +47,8 @@ def test_correctLetter(tableTest):
     assert tableTest.correctLetter("49481743") == "A"
 
 # Test if we can check if a letter is correct or not
-@pytest.mark.test_letterIsCorrect
-def test_letterIsCorrect(tableTest):
+@pytest.mark.test_letterIsUp
+def test_letterIsUp(tableTest):
 
-    assert tableTest.letterIsCorrect("Ñ") == False
-    assert tableTest.letterIsCorrect("I") == False
-
-
-
+    assert tableTest.letterIsUp("Ñ") == False
+    assert tableTest.letterIsUp("I") == False

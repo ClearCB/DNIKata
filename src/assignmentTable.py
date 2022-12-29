@@ -22,6 +22,6 @@ class AssignmentTable:
         return self.assignment_table[self.letterPosition(number)]
 
     # This method check if the letter given is in the table
-    def letterIsCorrect(self, letter):
+    def letterIsUp(self, letter):
 
         return letter in self.assignment_table
