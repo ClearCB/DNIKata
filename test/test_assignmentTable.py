@@ -14,8 +14,9 @@ def test_assignmentTable():
 @pytest.mark.test_getLetter
 def test_getLetter():
 
-    dni = '49481740'
-
     dni_letter = AssignmentTable()
 
-    assert dni_letter.getLetter(dni) == "T"
+    assert dni_letter.getLetter("49481740") == "T"
+    assert dni_letter.getLetter("49481741") == "R"
+    assert dni_letter.getLetter("49481742") == "W"
+    assert dni_letter.getLetter("49481743") == "A"

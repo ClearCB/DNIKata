@@ -6,7 +6,8 @@ class AssignmentTable:
                             "P","D","X","B","N","J","Z","S",
                             "Q","V","H","L","C","K","E"]
 
-
     def getLetter(self, DNI):
 
-        return "T"
+        position_letter = int(DNI) % 23
+
+        return self.assignment_table[position_letter]
