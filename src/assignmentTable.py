@@ -24,4 +24,4 @@ class AssignmentTable:
     # This method check if the letter given is in the table
     def letterIsUp(self, letter):
 
-        return letter in self.assignment_table
+        return letter.upper() in self.assignment_table

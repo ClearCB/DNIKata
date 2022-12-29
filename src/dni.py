@@ -19,7 +19,7 @@ class DNI:
 
         return self.getLetter() == self.tabla.correctLetter(self.getNumber())
 
-    def numberLengthCorrect(self):
+    def numberLengthIsCorrect(self):
 
         return len(self.getNumber()) == 8
 
@@ -35,6 +35,19 @@ class DNI:
     def dniIsCorrect(self):
 
         try:
-            return self.numberLengthCorrect() and self.numberIsIntegrer() and self.letterIsCorrect()
+            return self.numberLengthIsCorrect() and self.numberIsIntegrer() and self.letterIsCorrect()
         except:
             return False
+
+
+if __name__ == "__main__":
+
+    dniCorrect = DNI("49481746Y")
+
+    dniIncorrectLength = DNI("123456789L")
+
+    dniIncorrectLetter = DNI("12345678Ñ")
+
+    print(dniCorrect.dniIsCorrect())
+    print(dniIncorrectLength.dniIsCorrect())
+    print(dniIncorrectLetter.dniIsCorrect())
