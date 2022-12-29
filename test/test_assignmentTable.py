@@ -10,3 +10,12 @@ def test_assignmentTable():
 
     assert type(first_letter) == str
 
+# Test if we can take the position of the letter in table
+@pytest.mark.test_getLetter
+def test_getLetter():
+
+    dni = '49481740'
+
+    dni_letter = AssignmentTable()
+
+    assert dni_letter.getLetter(dni) == "T"
