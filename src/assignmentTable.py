@@ -17,11 +17,11 @@ class AssignmentTable:
         return int(number) % self.getLength()
 
     # This method takes the letter in the table
-    def getLetter(self, number):
+    def correctLetter(self, number):
 
         return self.assignment_table[self.letterPosition(number)]
 
     # This method check if the letter given is in the table
-    def correctLetter(self, letter):
+    def letterIsCorrect(self, letter):
 
         return letter in self.assignment_table

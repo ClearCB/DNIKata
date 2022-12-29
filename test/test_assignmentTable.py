@@ -38,20 +38,20 @@ def test_letterPosition(tableTest):
     assert tableTest.letterPosition("49481740") == 0
 
 # Test if we can take the position of the letter in table
-@pytest.mark.test_getLetter
-def test_getLetter(tableTest):
+@pytest.mark.test_correctLetter
+def test_correctLetter(tableTest):
 
-    assert tableTest.getLetter("49481740") == "T"
-    assert tableTest.getLetter("49481741") == "R"
-    assert tableTest.getLetter("49481742") == "W"
-    assert tableTest.getLetter("49481743") == "A"
+    assert tableTest.correctLetter("49481740") == "T"
+    assert tableTest.correctLetter("49481741") == "R"
+    assert tableTest.correctLetter("49481742") == "W"
+    assert tableTest.correctLetter("49481743") == "A"
 
 # Test if we can check if a letter is correct or not
-@pytest.mark.test_letterCorrect
-def test_letterCorrect(tableTest):
+@pytest.mark.test_letterIsCorrect
+def test_letterIsCorrect(tableTest):
 
-    assert tableTest.correctLetter("Ñ") == False
-    assert tableTest.correctLetter("I") == False
+    assert tableTest.letterIsCorrect("Ñ") == False
+    assert tableTest.letterIsCorrect("I") == False
 
 
 
