@@ -19,5 +19,16 @@ class DNI:
 
         return self.getLetter() == self.tabla.correctLetter(self.getNumber())
 
-    # def numberIsCorrect(self):
+    def numberLengthCorrect(self):
+
+        return len(self.getNumber()) == 8
+
+    def numberIsIntegrer(self):
+
+        try:
+            int(self.getNumber())
+            return True
+
+        except:
+            return False 
 

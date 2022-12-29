@@ -10,7 +10,7 @@ def dniTest():
 @pytest.fixture
 def dniTestIncorrect():
 
-    dni_incorrect = DNI("484848484Ñ")
+    dni_incorrect = DNI("4848*81484Ñ")
     return dni_incorrect
 
 
@@ -37,7 +37,18 @@ def test_getLetter(dniTest):
     assert dniTest.getLetter() == "Y"
 
 @pytest.mark.test_letterIsCorrect
-def test_letterIsCorrect(dniTest, dniTestIncorrect):
+def test_letterIsCorrect(dniTest):
 
     assert dniTest.letterIsCorrect() == True
-    assert dniTestIncorrect.letterIsCorrect() == False
+
+@pytest.mark.test_numberLengthCorrect
+def test_numberLengthCorrect(dniTest,dniTestIncorrect):
+
+    assert dniTest.numberLengthCorrect() == True
+    assert dniTestIncorrect.numberLengthCorrect() == False
+
+@pytest.mark.test_numberIsIntegrer
+def test_numberIsIntegrer(dniTest,dniTestIncorrect):
+
+    assert dniTest.numberIsIntegrer() == True
+    assert dniTestIncorrect.numberIsIntegrer() == False
