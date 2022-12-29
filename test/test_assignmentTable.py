@@ -16,7 +16,6 @@ def test_assignmentTable():
 
     assert type(first_letter) == str
 
-
 # Test if the length can be calculated correctly
 @pytest.mark.test_getLenght
 def test_getLenght():

@@ -14,9 +14,7 @@ class AssignmentTable:
     # This method takes the position in the table with the number given
     def letterPosition(self, number):
 
-        letter_position = int(number) % self.getLength()
-
-        return letter_position
+        return int(number) % self.getLength()
 
     # This method takes the letter in the table
     def getLetter(self, number):
