@@ -13,7 +13,6 @@ def dniTestIncorrect():
     dni_incorrect = DNI("4848*81484","Ñ")
     return dni_incorrect
 
-
 @pytest.mark.test_dniConstructor
 def test_dniConstructor():
 
