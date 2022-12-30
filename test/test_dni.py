@@ -4,19 +4,13 @@ import pytest
 @pytest.fixture
 def dniTest():
 
-    dni = DNI("49481746Y")
-    return dni
-
-@pytest.fixture
-def dniTestNoLetter():
-
-    dni = DNI("49481746")
+    dni = DNI("49481746", "Y")
     return dni
 
 @pytest.fixture
 def dniTestIncorrect():
 
-    dni_incorrect = DNI("4848*81484Ñ")
+    dni_incorrect = DNI("4848*81484","Ñ")
     return dni_incorrect
 
 
@@ -26,35 +20,41 @@ def test_dniConstructor():
     number_dni = "123456789"
     letter_dni = "D"
 
-    dni = DNI("123456789D")
+    dni = DNI("123456789","D")
 
-    assert dni.number == (number_dni + letter_dni)
+    assert dni.dni == (number_dni + letter_dni)
     assert dni.tabla.assignment_table[9] == "D"
 
-@pytest.mark.test_getNumber
-def test_getNumber(dniTest):
+@pytest.mark.test_setNumber
+def test_setNumber(dniTest):
 
-    assert dniTest.getNumber() == "49481746"
+    assert dniTest.number == "49481746"
+
+    dniTest.setNumber("123123")
+
+    assert dniTest.number == "123123"
+
+@pytest.mark.test_setLetter
+def test_setLetter(dniTest):
+
+    dniTest.letter = "Ñ"
+
+    assert dniTest.letter == "Ñ"
+
+    dniTest.setLetter()
+
+    assert dniTest.letter == "Y"
 
 @pytest.mark.test_setDni
-def test_setDni(dniTestNoLetter):
+def test_setDni(dniTest):
 
-    assert dniTestNoLetter.number == "49481746"
+    dniTest.dni = "49481746"
 
-    dniTestNoLetter.setDni()
+    assert dniTest.dni == "49481746"
 
-    assert dniTestNoLetter.number == "49481746Y"
+    dniTest.setDni()
 
-
-@pytest.mark.test_getLetter
-def test_getLetter(dniTest):
-
-    assert dniTest.getLetter() == "Y"
-    
-    dniTest.number = "4948471" 
-
-    assert dniTest.getLetter() == False
-
+    assert dniTest.dni == "49481746Y"
 
 @pytest.mark.test_letterIsCorrect
 def test_letterIsCorrect(dniTest):
