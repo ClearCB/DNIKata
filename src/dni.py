@@ -2,18 +2,24 @@ from src.assignmentTable import AssignmentTable
 
 class DNI:
 
-    def __init__(self, number):
+    def __init__(self, number, letter=""):
 
         self.number = number
+        self.letter = letter
+        self.dni = number + letter
         self.tabla = AssignmentTable()
 
     def getLetter(self):
 
-        return self.number[-1]
+        return self.letter
 
     def getNumber(self):
 
-        return self.number[:-1]
+        return self.number
+
+    def getDni(self):
+
+        return self.dni
 
     def letterIsCorrect(self):
 
@@ -38,6 +44,10 @@ class DNI:
     def dniIsCorrect(self):
 
         return self.numberLengthIsCorrect() and self.numberIsIntegrer() and self.letterIsCorrect()
+
+    def setDni(self):
+
+        self.number = (self.number + self.tabla.correctLetter(self.number))
 
 
 if __name__ == "__main__":
