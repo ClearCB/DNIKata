@@ -1,5 +1,7 @@
 # DNI
 
+This kata is related to the one my teacher did for class: [dfleta-dni](https://github.com/dfleta/Python_ejercicios/tree/master/Poo/DNI)
+
 This is a kata in which i had a first look at the object-oriented programming (POO) and non-static classes, in which a constructor allow us to create objects.
 
 It consist in creating a program in which we give a number of 8 digits and the program returns their letter to get an identifier of Spain called "DNI" (national document identifier).
