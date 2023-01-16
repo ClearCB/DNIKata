@@ -4,8 +4,8 @@
 
 This kata is related to the one my teacher did for class: [dfleta-dni](https://github.com/dfleta/Python_ejercicios/tree/master/Poo/DNI). It will consist in two parts of the same kata:
 
-* SRP/OCP: one aproximation to POO using both principles SOLID. ([SRP_branch]())
-* DDD: trying to solve the same problem, but starting each design driven by the domain about the topic. ([DDD_branch]())
+* SRP/OCP: one aproximation to POO using both principles SOLID. ([SRP_branch](https://github.com/ClearCB/DNIKata/tree/KATA_SRP_OCP))
+* DDD: trying to solve the same problem, but starting each design driven by the domain about the topic. ([DDD_branch](https://github.com/ClearCB/DNIKata/tree/KATA_DDD))
 
 This is a kata in which i had a first look at the object-oriented programming (POO) and non-static classes, in which we will try to get the letter corresponding to each number using the NIF (fiscal identifier number) .
 
