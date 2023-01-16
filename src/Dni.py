@@ -34,7 +34,7 @@ class Dni(Table):
 
     def setDni(self):
 
-        self.dni = str(self.getNif()) + self.letter
+        self.dni = str(self.getNif()) + self.getLetter()
 
     def setNif(self, nif):
 
